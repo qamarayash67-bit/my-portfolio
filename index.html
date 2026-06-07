@@ -10,12 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="video-background">
-        <video autoplay loop muted playsinline>
-            <source src="marketing-video.mp4" type="video/mp4">
-        </video>
-        <div class="video-overlay"></div>
-    </div>
 
     <div class="container">
         <header>
@@ -32,78 +26,79 @@
                     <p>My work lives at the intersection of visual identity, digital experience, and brand storytelling. I specialize in crafting distinctive visual directions, brand systems, and capturing cinematic media that elevates businesses and drives engagement.</p>
                 </div>
                 <div class="profile-frame">
-                    <img src="my-profile.JPG" alt="Khadejha Ayyash">
+                    <img src="my-profile.jpg" alt="Khadejha Ayyash" onclick="openLightbox(this.src)">
                 </div>
             </div>
         </section>
 
         <section id="work">
             <h2 class="fade-in">Featured Projects & Identity</h2>
+            <p class="click-hint">💡 Click on any item to view full screen</p>
             <div class="portfolio-grid">
-                <div class="portfolio-item fade-in">
+                <div class="portfolio-item fade-in" onclick="openLightbox('juice-poster1.jpg')">
                     <div class="media-container">
                         <img src="juice-poster1.jpg" alt="Juice Poster 1">
                     </div>
                     <h3>Juice Poster Design</h3>
                     <p>Product Branding & Cinematic Lighting</p>
                 </div>
-                <div class="portfolio-item fade-in">
+                <div class="portfolio-item fade-in" onclick="openLightbox('juice-poster2.jpg')">
                     <div class="media-container">
                         <img src="juice-poster2.jpg" alt="Juice Poster 2">
                     </div>
                     <h3>Juice Branding Campaign</h3>
                     <p>Alternative Commercial Poster Layout</p>
                 </div>
-                <div class="portfolio-item fade-in">
+                <div class="portfolio-item fade-in" onclick="openLightbox('car-poster.jpg')">
                     <div class="media-container">
                         <img src="car-poster.jpg" alt="Car Poster">
                     </div>
                     <h3>Car Poster Design</h3>
                     <p>Automotive Advertising & Visual Direction</p>
                 </div>
-                <div class="portfolio-item fade-in">
+                <div class="portfolio-item fade-in" onclick="openLightbox('porsche-poster.jpg')">
                     <div class="media-container">
                         <img src="porsche-poster.jpg" alt="Porsche Poster">
                     </div>
                     <h3>Porsche Concepts</h3>
                     <p>Luxury Creative Advertisement Artwork</p>
                 </div>
-                <div class="portfolio-item fade-in">
+                <div class="portfolio-item fade-in" onclick="openLightbox('airline-poster.jpg')">
                     <div class="media-container">
                         <img src="airline-poster.jpg" alt="Airline Poster">
                     </div>
                     <h3>Airline Poster Campaign</h3>
                     <p>Marketing, Editorial Layout & Visual Strategy</p>
                 </div>
-                <div class="portfolio-item fade-in">
+                <div class="portfolio-item fade-in" onclick="openLightbox('sketches-gallery.jpg')">
                     <div class="media-container">
                         <img src="sketches-gallery.jpg" alt="Sketches Gallery">
                     </div>
                     <h3>Creative Sketches</h3>
                     <p>Concept Art & Digital Illustration Gallery</p>
                 </div>
-                <div class="portfolio-item fade-in">
+                <div class="portfolio-item fade-in" onclick="openLightbox('portrait-session.jpg')">
                     <div class="media-container">
                         <img src="portrait-session.jpg" alt="Portrait Photography">
                     </div>
                     <h3>Portrait & Product Photography</h3>
                     <p>Professional Visual Storytelling & Studio Lighting</p>
                 </div>
-                <div class="portfolio-item fade-in">
+                <div class="portfolio-item fade-in" onclick="openLightbox('eyewear-main.jpg')">
                     <div class="media-container">
                         <img src="eyewear-main.jpg" alt="Visual Identity">
                     </div>
                     <h3>Visual Identity Showcase</h3>
                     <p>Brand Identity Guidelines & Typography Systems</p>
                 </div>
-                <div class="portfolio-item fade-in">
+                <div class="portfolio-item fade-in" onclick="openLightbox('magazine-spread.JPG')">
                     <div class="media-container">
                         <img src="magazine-spread.JPG" alt="Magazine Spread">
                     </div>
                     <h3>Magazine Spread Layout</h3>
                     <p>Editorial Print Design & Creative Publishing</p>
                 </div>
-                <div class="portfolio-item fade-in">
+                <div class="portfolio-item fade-in" onclick="openLightbox('web-design-main.jpg')">
                     <div class="media-container">
                         <img src="web-design-main.jpg" alt="Web Design System">
                     </div>
@@ -113,10 +108,20 @@
             </div>
         </section>
 
+        <section id="video" class="section-card fade-in">
+            <h2>Video Production Showcase</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <video controls style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border-color);">
+                    <source src="marketing-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
         <section id="documents" class="section-card fade-in">
             <h2>Project Case Studies (PDF)</h2>
             <div class="pdf-box">
-                <p>Select a project case below to view full identity guidelines and presentation sheets.</p>
+                <p>Select a project case below to view full identity guidelines and presentation sheets in a new tab.</p>
                 <div class="pdf-grid">
                     <a href="eyewear-project.pdf" target="_blank" class="btn-gold">👁️ Eyewear Case Study</a>
                     <a href="magazine-project.pdf" target="_blank" class="btn-gold">📖 Magazine Presentation</a>
@@ -141,5 +146,20 @@
             <p>&copy; 2026 Khadejha Ayyash. All rights reserved. • Amman, Jordan</p>
         </footer>
     </div>
+
+    <div id="customLightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-btn">&times; Close</span>
+        <img class="lightbox-content" id="lightboxImg">
+    </div>
+
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightboxImg').src = src;
+            document.getElementById('customLightbox').style.display = 'flex';
+        }
+        function closeLightbox() {
+            document.getElementById('customLightbox').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
