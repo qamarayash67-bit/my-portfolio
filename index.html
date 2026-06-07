@@ -17,18 +17,19 @@
 
     /* Grid Styling */
     .works-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; margin-bottom: 60px; }
-    .work-card { background: #1a1a1a; border: 1px solid #222; border-radius: 8px; overflow: hidden; transition: transform 0.3s, border-color 0.3s; }
+    .work-card { background: #1a1a1a; border: 1px solid #222; border-radius: 8px; overflow: hidden; transition: transform 0.3s, border-color 0.3s; display: flex; flex-direction: column; }
     .work-card:hover { transform: translateY(-5px); border-color: #cca43b; }
     
     .work-thumb { width: 100%; height: 240px; background: #222; overflow: hidden; position: relative; }
     .work-thumb img { width: 100%; height: 100%; object-fit: cover; }
     
-    .work-info { padding: 20px; }
+    .work-info { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .work-details { margin-bottom: 15px; }
     .work-category { font-size: 0.8rem; text-transform: uppercase; color: #cca43b; letter-spacing: 1px; margin-bottom: 5px; font-weight: 600; }
     .work-title { font-size: 1.3rem; font-weight: 600; margin-bottom: 8px; color: #fff; }
     .work-sub { font-size: 0.9rem; color: #aaa; line-height: 1.5; }
     
-    .pdf-btn { display: inline-block; margin-top: 15px; padding: 8px 16px; background: #cca43b; color: #111; text-decoration: none; border-radius: 4px; font-size: 0.85rem; font-weight: bold; transition: background 0.3s; }
+    .pdf-btn { display: inline-block; padding: 8px 16px; background: #cca43b; color: #111; text-decoration: none; border-radius: 4px; font-size: 0.85rem; font-weight: bold; transition: background 0.3s; text-align: center; width: fit-content; }
     .pdf-btn:hover { background: #e5b945; }
 
     /* Contact Section Styling */
@@ -61,51 +62,62 @@
           <video src="marketing-video.mp4" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover; display:block;"></video>
         </div>
         <div class="work-info">
-          <div class="work-category">Corporate Branding & Motion</div>
-          <div class="work-title">Marketing Company Identity</div>
-          <div class="work-sub">Full branding concept video showcase, official stationery, and animated assets.</div>
+          <div class="work-details">
+            <div class="work-category">Corporate Branding & Motion</div>
+            <div class="work-title">Marketing Company Identity</div>
+            <div class="work-sub">Full branding concept video showcase, official stationery, and animated assets.</div>
+          </div>
         </div>
       </div>
 
-      <!-- PROJECT 2: Eyewear Brand Identity (هوية النظارات مع زر PDF) -->
+      <!-- PROJECT 2: Eyewear Brand Identity (هوية النظارات) -->
       <div class="work-card">
         <div class="work-thumb"><img src="eyewear-main.jpg" alt="Eyewear Brand Identity"></div>
         <div class="work-info">
-          <div class="work-category">Brand Identity</div>
-          <div class="work-title">Eyewear Brand Project</div>
-          <div class="work-sub">Complete visual system including logo, stationery, and business cards.</div>
+          <div class="work-details">
+            <div class="work-category">Brand Identity</div>
+            <div class="work-title">Eyewear Brand Project</div>
+            <div class="work-sub">Complete visual system including logo design, commercial application, and brand touchpoints.</div>
+          </div>
           <a href="eyewear-project.pdf" target="_blank" class="pdf-btn">View Full PDF 📄</a>
         </div>
       </div>
 
-      <!-- PROJECT 3: Cake Magazine Layout (المجلة مع زر PDF) -->
+      <!-- PROJECT 3: Adobe XD Web Design (مشروع الـ XD الجديد) -->
+      <div class="work-card">
+        <div class="work-thumb"><img src="web-design-main.jpg" alt="UI/UX Web Design"></div>
+        <div class="work-info">
+          <div class="work-details">
+            <div class="work-category">UI/UX Design</div>
+            <div class="work-title">Adobe XD Web Platform Design</div>
+            <div class="work-sub">User interface and experience design concept, wires, and interactive prototypes.</div>
+          </div>
+          <a href="web-design-project.pdf" target="_blank" class="pdf-btn">View Full Prototype PDF 💻</a>
+        </div>
+      </div>
+
+      <!-- PROJECT 4: Cake Magazine Layout (المجلة) -->
       <div class="work-card">
         <div class="work-thumb"><img src="magazine-spread.jpg" alt="10-Page Magazine Layout"></div>
         <div class="work-info">
-          <div class="work-category">Print & Editorial Design</div>
-          <div class="work-title">10-Page Cake Magazine</div>
-          <div class="work-sub">Professional multi-page layout design and typography structuring.</div>
+          <div class="work-details">
+            <div class="work-category">Print & Editorial Design</div>
+            <div class="work-title">10-Page Cake Magazine</div>
+            <div class="work-sub">Professional multi-page layout design, custom typography structuring, and system design.</div>
+          </div>
           <a href="magazine-project.pdf" target="_blank" class="pdf-btn">Read Full Magazine 📖</a>
         </div>
       </div>
 
-      <!-- PROJECT 4: Portrait Photography (تصوير الأشخاص) -->
+      <!-- PROJECT 5: Portrait Photography (تصوير الأشخاص) -->
       <div class="work-card">
         <div class="work-thumb"><img src="portrait-session.jpg" alt="Portrait Photography Session"></div>
         <div class="work-info">
-          <div class="work-category">Photography</div>
-          <div class="work-title">Portrait Photoshoot Session</div>
-          <div class="work-sub">Professional portrait captures featuring creative lighting and retouching.</div>
-        </div>
-      </div>
-
-      <!-- PROJECT 5: Fine Art Gallery (معرض الرسم) -->
-      <div class="work-card">
-        <div class="work-thumb"><img src="sketches-gallery.jpg" alt="Fine Art Gallery"></div>
-        <div class="work-info">
-          <div class="work-category">Fine Art</div>
-          <div class="work-title">Traditional Sketches Collection</div>
-          <div class="work-sub">A curated collection of hand-drawn conceptual charcoal and graphite artworks.</div>
+          <div class="work-details">
+            <div class="work-category">Photography</div>
+            <div class="work-title">Portrait Photoshoot Session</div>
+            <div class="work-sub">Professional creative portraits, composition techniques, and advanced color grading.</div>
+          </div>
         </div>
       </div>
 
@@ -113,9 +125,69 @@
       <div class="work-card">
         <div class="work-thumb"><img src="porsche-poster.jpg" alt="Porsche Commercial Poster"></div>
         <div class="work-info">
-          <div class="work-category">Creative Advertising</div>
-          <div class="work-title">Porsche Celebration Poster</div>
-          <div class="work-sub">Luxury automotive advertising design and professional layout manipulation.</div>
+          <div class="work-details">
+            <div class="work-category">Creative Advertising</div>
+            <div class="work-title">Porsche Celebration Poster</div>
+            <div class="work-sub">Luxury automotive commercial layout and high-end advertising concept manipulation.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 7: Airline Commercial Poster (بوستر طيران) -->
+      <div class="work-card">
+        <div class="work-thumb"><img src="airline-poster.jpg" alt="Airline Advertising Poster"></div>
+        <div class="work-info">
+          <div class="work-details">
+            <div class="work-category">Creative Advertising</div>
+            <div class="work-title">Airline Travel Poster</div>
+            <div class="work-sub">Travel ad campaign focusing on dynamic layout depth and visual branding elements.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 8: Car Poster (بوستر سيارة) -->
+      <div class="work-card">
+        <div class="work-thumb"><img src="car-poster.jpg" alt="Car Poster Design"></div>
+        <div class="work-info">
+          <div class="work-details">
+            <div class="work-category">Creative Advertising</div>
+            <div class="work-title">Automotive Advertising Poster</div>
+            <div class="work-sub">Sleek and professional dark-themed product layout for modern automotive marketing.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 9: Juice Poster 1 (بوستر عصير 1) -->
+      <div class="work-card">
+        <div class="work-thumb"><img src="juice-poster1.jpg" alt="Beverage Ad Design 1"></div>
+        <div class="work-info">
+          <div class="work-details">
+            <div class="work-category">Commercial Manipulation</div>
+            <div class="work-title">Vibrant Splash Juice Poster</div>
+            <div class="work-sub">Dynamic splash product manipulation for refreshing commercial advertisements.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 10: Juice Poster 2 (بوستر عصير 2) -->
+      <div class="work-card">
+        <div class="work-thumb"><img src="juice-poster2.jpg" alt="Beverage Ad Design 2"></div>
+        <div class="work-info">
+          <div class="work-category">Commercial Manipulation</div>
+          <div class="work-title">Summer in a Can Beverage Poster</div>
+          <div class="work-sub">Fresh and bright summer-themed beverage layout for commercial social media campaigns.</div>
+        </div>
+      </div>
+
+      <!-- PROJECT 11: Fine Art Gallery (معرض الرسم) -->
+      <div class="work-card">
+        <div class="work-thumb"><img src="sketches-gallery.jpg" alt="Fine Art Gallery"></div>
+        <div class="work-info">
+          <div class="work-details">
+            <div class="work-category">Fine Art</div>
+            <div class="work-title">Traditional Sketches Collection</div>
+            <div class="work-sub">A curated selection of 6 hand-drawn conceptual charcoal and graphite fine art pieces.</div>
+          </div>
         </div>
       </div>
 
