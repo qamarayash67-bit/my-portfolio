@@ -5,29 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khadejha Ayyash — Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- استيراد الخطوط لتصميم فخم -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+    <style>
+        /* التنسيق الاحترافي المتكامل تاح كلود المعدل */
+        :root {
+            --bg-color: #0b0b0d;
+            --card-bg: #121214;
+            --border-color: #1c1c1f;
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1a6;
+            --accent-gold: #d4af37;
+            --accent-hover: #f1c40f;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-secondary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1.6;
+        }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--text-primary); }
+        .container { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+        header { text-align: center; margin-bottom: 5rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border-color); }
+        header h1 { font-size: 3.5rem; margin-bottom: 0.5rem; letter-spacing: -1px; }
+        .gold-text { color: var(--accent-gold); font-size: 1.2rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; }
+        section { margin-bottom: 6rem; }
+        section h2 { font-size: 2.2rem; margin-bottom: 2.5rem; position: relative; padding-bottom: 0.5rem; }
+        section h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 40px; height: 2px; background: var(--accent-gold); }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        @media (max-width: 768px) { .about-content { grid-template-columns: 1fr; gap: 2rem; } header h1 { font-size: 2.5rem; } }
+        .profile-frame { background: var(--card-bg); border: 1px solid var(--border-color); padding: 1rem; border-radius: 12px; }
+        .profile-frame img { width: 100%; height: auto; border-radius: 6px; display: block; }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; }
+        .portfolio-item { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; transition: transform 0.3s ease, border-color 0.3s ease; padding: 1rem; }
+        .portfolio-item:hover { transform: translateY(-5px); border-color: var(--accent-gold); }
+        .portfolio-item img, .portfolio-item video { width: 100%; height: 240px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem; display: block; }
+        .portfolio-item h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+        .portfolio-item p { font-size: 0.9rem; color: var(--text-secondary); }
+        .pdf-box { background: var(--card-bg); border: 1px solid var(--border-color); padding: 2.5rem; border-radius: 12px; text-align: center; }
+        .pdf-grid { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; margin-top: 1.5rem; }
+        .btn { display: inline-flex; align-items: center; background: transparent; border: 1px solid var(--border-color); color: var(--text-primary); padding: 0.8rem 2rem; border-radius: 30px; text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: all 0.3s ease; }
+        .btn:hover { background: var(--accent-gold); color: var(--bg-color); border-color: var(--accent-gold); transform: translateY(-2px); }
+        .contact-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 3rem; text-align: center; max-width: 600px; margin: 0 auto; }
+        .contact-grid { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+        .contact-btn { display: block; background: #1a1a1e; border: 1px solid var(--border-color); color: var(--text-primary); padding: 1.2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; }
+        .contact-btn:hover { border-color: var(--accent-gold); color: var(--accent-gold); background: #222226; }
+        footer { text-align: center; padding-top: 3rem; border-top: 1px solid var(--border-color); margin-top: 5rem; font-size: 0.85rem; }
+    </style>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>Khadejha Ayyash</h1>
             <p class="gold-text">Graphic Designer & Photographer</p>
-            <p>Based in Amman, Jordan</p>
         </header>
 
-        <section style="margin: 4rem 0;">
+        <section id="about">
             <h2>About Me</h2>
-            <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: center;">
-                <div style="flex: 1; min-width: 300px;">
-                    <p>I'm Khadejha Omar Salim Ayyash — a graphic designer, photographer, and founder based in Amman, Jordan. My work lives at the intersection of visual identity, digital experience, and brand storytelling.</p>
-                    <p>I graduated in Graphic Design (2026) and have spent the past 1-2 years building brands, designing websites, crafting print materials, and directing visual campaigns.</p>
+            <div class="about-content">
+                <div>
+                    <p style="margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--text-primary);">I'm Khadejha Omar Salim Ayyash — a graphic designer, photographer, and founder based in Amman, Jordan.</p>
+                    <p style="margin-bottom: 1.5rem;">My work lives at the intersection of visual identity, digital experience, and brand storytelling. I graduated in Graphic Design (2026) and have spent the past years building brands, designing websites, and directing visual campaigns.</p>
                 </div>
-                <div style="flex: 1; min-width: 300px; max-width: 400px;">
-                    <img src="my-profile.JPG" alt="Khadejha Ayyash" style="width:100%; border-radius:8px; border: 1px solid #1c1c1f;">
+                <div class="profile-frame">
+                    <!-- تأكدي أن اسم الملف على جيت هاب هو my-profile.JPG بالظبط -->
+                    <img src="my-profile.JPG" alt="Khadejha Ayyash">
                 </div>
             </div>
         </section>
 
-        <section style="margin: 4rem 0;">
+        <section id="work">
             <h2>Featured Projects</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
@@ -48,38 +98,43 @@
             </div>
         </section>
 
-        <section style="margin: 4rem 0;">
+        <section id="video">
             <h2>Video Production</h2>
             <div class="portfolio-item" style="max-width: 800px; margin: 0 auto;">
-                <video controls>
+                <video controls style="height: auto; max-height: 450px;">
                     <source src="marketing-video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <h3>Marketing Video</h3>
+                <h3 style="margin-top: 1rem;">Marketing & Visual Showcase</h3>
             </div>
         </section>
 
-        <section style="margin: 4rem 0;">
-            <h2>Project Documents (PDF)</h2>
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                <a href="eyewear-project.pdf.pdf" target="_blank" class="btn">Eyewear Project PDF</a>
-                <a href="magazine-project.pdf.pdf" target="_blank" class="btn">Magazine Project PDF</a>
-                <a href="web-design-project.pdf" target="_blank" class="btn">Web Design Project PDF</a>
+        <section id="documents">
+            <h2>Project Cases (PDF)</h2>
+            <div class="pdf-box">
+                <p>Click on any project below to view the full presentation details directly.</p>
+                <div class="pdf-grid">
+                    <a href="eyewear-project.pdf" target="_blank" class="btn">👁️ Eyewear Project</a>
+                    <a href="magazine-project.pdf" target="_blank" class="btn">📖 Magazine Project</a>
+                    <a href="web-design-project.pdf" target="_blank" class="btn">🌐 Web Design Project</a>
+                </div>
             </div>
         </section>
 
-        <section style="margin: 4rem 0; border-top: 1px solid #1c1c1f; padding-top: 3rem;">
-            <h2>Get In Touch</h2>
-            <p>Have a project in mind? Let's work together.</p>
-            <div class="contact-links">
-                <a href="https://instagram.com/kh_.omar" target="_blank" class="contact-btn" style="color: #d4af37;">Instagram: @kh_.omar</a>
-                <a href="https://wa.me/962788542323" target="_blank" class="contact-btn">WhatsApp Chat</a>
-                <a href="tel:+962788542323" class="contact-btn">Call: +962 78 854 2323</a>
+        <section id="contact">
+            <div class="contact-card">
+                <h2>Let's Work Together</h2>
+                <p>Have a project in mind? Whether it's a full brand identity or digital experience — I'd love to hear what you're building.</p>
+                <div class="contact-grid">
+                    <a href="https://instagram.com/kh_.omar" target="_blank" class="contact-btn" style="color: var(--accent-gold); border-color: var(--accent-gold);">📸 Instagram: @kh_.omar</a>
+                    <a href="https://wa.me/962788542323" target="_blank" class="contact-btn">💬 Chat on WhatsApp</a>
+                    <a href="tel:+962788542323" class="contact-btn">📞 Call: +962 78 854 2323</a>
+                </div>
             </div>
         </section>
 
         <footer>
-            <p style="text-align: center; color: #555; margin-top: 4rem;">&copy; 2026 Khadejha Ayyash. All rights reserved.</p>
+            <p>&copy; 2026 Khadejha Ayyash. All rights reserved. • Amman, Jordan</p>
         </footer>
     </div>
 </body>
