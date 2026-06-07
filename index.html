@@ -26,7 +26,7 @@
                     <p>My work lives at the intersection of visual identity, digital experience, and brand storytelling. I specialize in crafting distinctive visual directions, brand systems, and capturing cinematic media that elevates businesses and drives engagement.</p>
                 </div>
                 <div class="profile-frame">
-                    <img src="my-profile.jpg" alt="Khadejha Ayyash" onclick="openLightbox(this.src)">
+                    <img src="my-profile.JPG" alt="Khadejha Ayyash" onclick="openLightbox(this.src)">
                 </div>
             </div>
         </section>
@@ -108,24 +108,14 @@
             </div>
         </section>
 
-        <section id="video" class="section-card fade-in">
-            <h2>Video Production Showcase</h2>
-            <div style="max-width: 800px; margin: 0 auto;">
-                <video controls style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border-color);">
-                    <source src="marketing-video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </section>
-
         <section id="documents" class="section-card fade-in">
             <h2>Project Case Studies (PDF)</h2>
             <div class="pdf-box">
-                <p>Select a project case below to view full identity guidelines and presentation sheets in a new tab.</p>
+                <p>Select a project case below to view full identity guidelines directly on this page.</p>
                 <div class="pdf-grid">
-                    <a href="eyewear-project.pdf" target="_blank" class="btn-gold">👁️ Eyewear Case Study</a>
-                    <a href="magazine-project.pdf" target="_blank" class="btn-gold">📖 Magazine Presentation</a>
-                    <a href="web-design-project.pdf" target="_blank" class="btn-gold">🌐 Web Design System</a>
+                    <button onclick="openPDF('eyewear-project.pdf.')" class="btn-gold-btn">👁️ Eyewear Case Study</button>
+                    <button onclick="openPDF('magazine-project.pdf')" class="btn-gold-btn">📖 Magazine Presentation</button>
+                    <button onclick="openPDF('web-design-project.pdf.pdf')" class="btn-gold-btn">🌐 Web Design System</button>
                 </div>
             </div>
         </section>
@@ -148,17 +138,39 @@
     </div>
 
     <div id="customLightbox" class="lightbox" onclick="closeLightbox()">
-        <span class="close-btn">&times; Close</span>
+        <span class="close-btn">&times; Close & Back</span>
         <img class="lightbox-content" id="lightboxImg">
     </div>
 
+    <div id="pdfViewerModal" class="pdf-modal">
+        <div class="pdf-modal-header">
+            <button class="pdf-back-btn" onclick="closePDF()">← Return to Main Portfolio</button>
+        </div>
+        <div class="pdf-modal-body">
+            <iframe id="pdfFrame" src="" width="100%" height="100%"></iframe>
+        </div>
+    </div>
+
     <script>
+        // دالة فتح الصور كاملة عند الكبس عليها
         function openLightbox(src) {
             document.getElementById('lightboxImg').src = src;
             document.getElementById('customLightbox').style.display = 'flex';
         }
         function closeLightbox() {
             document.getElementById('customLightbox').style.display = 'none';
+        }
+
+        // دالة فتح الـ PDF الذكية بداخل الموقع
+        function openPDF(pdfUrl) {
+            document.getElementById('pdfFrame').src = pdfUrl;
+            document.getElementById('pdfViewerModal').style.display = 'block';
+            document.body.style.overflow = 'hidden'; // لمنع نزول الصفحة بالخلفية أثناء القراءة
+        }
+        function closePDF() {
+            document.getElementById('pdfViewerModal').style.display = 'none';
+            document.getElementById('pdfFrame').src = '';
+            document.body.style.overflow = 'auto';
         }
     </script>
 </body>
