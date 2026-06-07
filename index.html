@@ -5,20 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Khadejha Ayyash — Graphic Designer & Visual Director based in Amman, Jordan." />
   <title>Khadejha Ayyash — Graphic Designer</title>
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
-  <!-- External CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ================================================
-       NAVIGATION
-  ================================================ -->
+  <!-- ================================================ NAVIGATION ================================================ -->
   <nav>
     <a class="nav-name" href="#">Khadejha Ayyash</a>
     <ul class="nav-links">
@@ -29,20 +23,15 @@
     </ul>
   </nav>
 
-  <!-- ================================================
-       HERO
-       • صورتك: my-profile.JPG
-  ================================================ -->
+  <!-- ================================================ HERO ================================================ -->
   <div class="hero">
     <div class="hero-text">
       <div class="hero-label">Graphic Designer · Jordan</div>
-
       <h1>Where ideas <span>become</span> visual identity.</h1>
-
       <p class="hero-bio">
-        I'm Khadejha Ayyash — a multidisciplinary graphic designer with a passion for brand storytelling, UI/UX design, and visual direction. I build brands that people <em>feel</em> before they read.
+        I'm Khadejha Ayyash — a multidisciplinary graphic designer with a passion for brand storytelling,
+        UI/UX design, and visual direction. I build brands that people <em>feel</em> before they read.
       </p>
-
       <div class="hero-tags">
         <span class="tag">Brand Identity</span>
         <span class="tag">UI/UX Design</span>
@@ -50,7 +39,6 @@
         <span class="tag">Social Media</span>
         <span class="tag">Print Design</span>
       </div>
-
       <div class="hero-cta">
         <a class="btn-primary" href="#works">View My Work</a>
         <a class="btn-ghost"    href="#contact">Let's Talk</a>
@@ -58,13 +46,7 @@
     </div>
 
     <div class="hero-photo">
-      <!--
-        ╔══════════════════════════════════════════╗
-        ║  صورتك الشخصية                          ║
-        ║  اسم الملف بالظبط: my-profile.JPG       ║
-        ║  حطيه بنفس الفولدر مع index.html        ║
-        ╚══════════════════════════════════════════╝
-      -->
+      <!-- صورتك: my-profile.JPG -->
       <div class="photo-frame">
         <img src="my-profile.JPG" alt="Khadejha Ayyash — Graphic Designer" />
       </div>
@@ -76,9 +58,7 @@
     </div>
   </div>
 
-  <!-- ================================================
-       SERVICES
-  ================================================ -->
+  <!-- ================================================ SERVICES ================================================ -->
   <section id="services">
     <div class="section-header">
       <div>
@@ -87,7 +67,6 @@
       </div>
       <div class="section-line"></div>
     </div>
-
     <div class="services-grid">
       <div class="service-card">
         <span class="service-icon">◈</span>
@@ -112,42 +91,26 @@
     </div>
   </section>
 
-  <!-- ================================================
-       MARKETING VIDEO
-       • اسم الملف بالظبط: marketing-video.mp4
-  ================================================ -->
+  <!-- ================================================ VIDEO ================================================ -->
   <div class="video-section">
     <div class="section-header">
       <div>
-        <div class="section-label">Motion & Campaign</div>
+        <div class="section-label">Motion &amp; Campaign</div>
         <div class="section-title">Showreel</div>
       </div>
       <div class="section-line"></div>
     </div>
-
-    <!--
-      ╔══════════════════════════════════════════╗
-      ║  فيديو التسويق                          ║
-      ║  اسم الملف بالظبط: marketing-video.mp4  ║
-      ║  حطيه بنفس الفولدر مع index.html        ║
-      ╚══════════════════════════════════════════╝
-    -->
+    <!-- فيديو: marketing-video.mp4 -->
     <div class="video-wrapper">
       <video controls poster="my-profile.JPG">
         <source src="marketing-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
-    <p class="video-label">Marketing & Visual Campaign — 2026</p>
+    <p class="video-label">Marketing &amp; Visual Campaign — 2026</p>
   </div>
 
-  <!-- ================================================
-       WORKS / PORTFOLIO
-       PDF files:
-       • eyewear-project.pdf
-       • magazine-project.pdf
-       • web-design-project.pdf
-  ================================================ -->
+  <!-- ================================================ WORKS ================================================ -->
   <section id="works">
     <div class="section-header">
       <div>
@@ -157,7 +120,6 @@
       <div class="section-line"></div>
     </div>
 
-    <!-- Filter Buttons -->
     <div class="works-filter">
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="brand">Brand Identity</button>
@@ -168,14 +130,37 @@
 
     <div class="works-grid" id="worksGrid">
 
-      <!-- ── PROJECT 1 ── SONATIQ Website (UI/UX) -->
+      <!-- PROJECT 1 — Eyewear Brand Identity -->
+      <!-- صورة: eyewear-main.jpg | PDF: eyewear-project.pdf.pdf -->
+      <a class="work-card" href="eyewear-project.pdf.pdf" target="_blank" data-category="brand">
+        <div class="work-thumb">
+          <img src="eyewear-main.jpg" alt="Eyewear Brand Identity" />
+        </div>
+        <div class="work-info">
+          <div class="work-category">Brand Identity · Eyewear</div>
+          <div class="work-title">Eyewear Brand — Visual Identity</div>
+          <div class="work-sub">Logo · Color system · Brand guidelines</div>
+          <span class="work-pdf-badge">⬇ View PDF</span>
+        </div>
+      </a>
+
+      <!-- PROJECT 2 — Magazine Layout -->
+      <!-- صورة: magazine-spread.JPG | PDF: magazine-project.pdf.pdf -->
+      <a class="work-card" href="magazine-project.pdf.pdf" target="_blank" data-category="print">
+        <div class="work-thumb">
+          <img src="magazine-spread.JPG" alt="Magazine Layout Design" />
+        </div>
+        <div class="work-info">
+          <div class="work-category">Editorial · Print Design</div>
+          <div class="work-title">Magazine Layout Design</div>
+          <div class="work-sub">Typography · Grid system · Editorial layout</div>
+          <span class="work-pdf-badge">⬇ View PDF</span>
+        </div>
+      </a>
+
+      <!-- PROJECT 3 — Web Design (SONATIQ) -->
+      <!-- PDF: web-design-project.pdf -->
       <a class="work-card" href="web-design-project.pdf" target="_blank" data-category="ui">
-        <!--
-          ╔═══════════════════════════════════════════╗
-          ║  PDF: web-design-project.pdf              ║
-          ║  صورة المشروع: Web_1920___1.jpg           ║
-          ╚═══════════════════════════════════════════╝
-        -->
         <div class="work-thumb">
           <img src="Web_1920___1.jpg" alt="Sonatiq Website" />
         </div>
@@ -183,23 +168,50 @@
           <div class="work-category">UI/UX Design</div>
           <div class="work-title">SONATIQ — Sound Design Studio</div>
           <div class="work-sub">Full website design · Multi-page UI system</div>
-          <a class="work-pdf-badge" href="web-design-project.pdf" target="_blank">⬇ View PDF</a>
+          <span class="work-pdf-badge">⬇ View PDF</span>
         </div>
       </a>
 
-      <!-- ── PROJECT 2 ── SONATIQ Service Pages (UI/UX) -->
-      <div class="work-card" data-category="ui">
+      <!-- PROJECT 4 — Juice Poster -->
+      <!-- صورة: juice-poster1.jpg -->
+      <div class="work-card" data-category="product">
         <div class="work-thumb">
-          <img src="Artboard___2.jpg" alt="Sonatiq Service Pages" />
+          <img src="juice-poster1.jpg" alt="Juice Poster" />
         </div>
         <div class="work-info">
-          <div class="work-category">UI/UX Design</div>
-          <div class="work-title">SONATIQ — Service Pages</div>
-          <div class="work-sub">Film Scoring · Recording · Sonic Branding · Game Audio</div>
+          <div class="work-category">Product Design · Campaign</div>
+          <div class="work-title">Juice — Product Poster</div>
+          <div class="work-sub">Visual advertising · Product direction</div>
         </div>
       </div>
 
-      <!-- ── PROJECT 3 ── Moukkab Business Card (Brand + Print) -->
+      <!-- PROJECT 5 — Car Poster -->
+      <!-- صورة: car-poster.jpg -->
+      <div class="work-card" data-category="product">
+        <div class="work-thumb">
+          <img src="car-poster.jpg" alt="Car Poster" />
+        </div>
+        <div class="work-info">
+          <div class="work-category">Product Design · Automotive</div>
+          <div class="work-title">Car — Visual Campaign</div>
+          <div class="work-sub">Product advertisement · Visual composition</div>
+        </div>
+      </div>
+
+      <!-- PROJECT 6 — Airline Poster -->
+      <!-- صورة: airline-poster.jpg -->
+      <div class="work-card" data-category="product">
+        <div class="work-thumb">
+          <img src="airline-poster.jpg" alt="Airline Poster" />
+        </div>
+        <div class="work-info">
+          <div class="work-category">Marketing Design · Aviation</div>
+          <div class="work-title">Airline — Campaign Poster</div>
+          <div class="work-sub">Marketing visual · Brand campaign</div>
+        </div>
+      </div>
+
+      <!-- PROJECT 7 — Moukkab Business Card -->
       <div class="work-card" data-category="brand print">
         <div class="work-thumb">
           <img src="موكب_بزنس_كارد_copy.jpg" alt="Moukkab Business Card" />
@@ -211,7 +223,7 @@
         </div>
       </div>
 
-      <!-- ── PROJECT 4 ── Moukkab Gift Bag (Brand + Print) -->
+      <!-- PROJECT 8 — Moukkab Gift Bag -->
       <div class="work-card" data-category="brand print">
         <div class="work-thumb">
           <img src="موكب_كيس_هداية_copy.jpg" alt="Moukkab Gift Bag" />
@@ -223,7 +235,7 @@
         </div>
       </div>
 
-      <!-- ── PROJECT 5 ── Coconut Oil Campaign (Product) -->
+      <!-- PROJECT 9 — Coconut Oil -->
       <div class="work-card" data-category="product">
         <div class="work-thumb">
           <img src="COCONUT_OIL_واجب.jpg" alt="Coconut Oil Campaign" />
@@ -235,62 +247,10 @@
         </div>
       </div>
 
-      <!-- ── PROJECT 6 ── Eyewear Brand Identity (PDF) -->
-      <a class="work-card" href="eyewear-project.pdf" target="_blank" data-category="brand">
-        <!--
-          ╔════════════════════════════════════════════╗
-          ║  PDF: eyewear-project.pdf                  ║
-          ║  لو عندك صورة للمشروع، غيّري              ║
-          ║  src="eyewear-cover.jpg" وحطيها بالفولدر   ║
-          ╚════════════════════════════════════════════╝
-        -->
-        <div class="work-thumb" style="background:var(--surface2);display:flex;align-items:center;justify-content:center">
-          <span style="font-size:3rem;color:var(--border)">◈</span>
-        </div>
-        <div class="work-info">
-          <div class="work-category">Brand Identity · Eyewear</div>
-          <div class="work-title">Eyewear Brand — Visual Identity</div>
-          <div class="work-sub">Logo · Color system · Brand guidelines</div>
-          <a class="work-pdf-badge" href="eyewear-project.pdf" target="_blank">⬇ View PDF</a>
-        </div>
-      </a>
-
-      <!-- ── PROJECT 7 ── Magazine Design (Print + PDF) -->
-      <a class="work-card" href="magazine-project.pdf" target="_blank" data-category="print">
-        <!--
-          ╔════════════════════════════════════════════╗
-          ║  PDF: magazine-project.pdf                 ║
-          ║  لو عندك صورة للمشروع، غيّري              ║
-          ║  src="magazine-cover.jpg" وحطيها بالفولدر  ║
-          ╚════════════════════════════════════════════╝
-        -->
-        <div class="work-thumb" style="background:var(--surface2);display:flex;align-items:center;justify-content:center">
-          <span style="font-size:3rem;color:var(--border)">⬡</span>
-        </div>
-        <div class="work-info">
-          <div class="work-category">Editorial · Print Design</div>
-          <div class="work-title">Magazine Layout Design</div>
-          <div class="work-sub">Typography · Grid system · Editorial layout</div>
-          <a class="work-pdf-badge" href="magazine-project.pdf" target="_blank">⬇ View PDF</a>
-        </div>
-      </a>
-
-      <!-- ── COMING SOON ── -->
-      <div class="work-card coming-soon" data-category="all">
-        <div class="coming-soon-inner">
-          <span class="coming-soon-plus">+</span>
-          <div class="coming-soon-title">More Projects</div>
-          <div class="coming-soon-sub">Coming soon</div>
-        </div>
-      </div>
-
     </div><!-- /works-grid -->
   </section>
 
-  <!-- ================================================
-       ABOUT
-       • صورتك: my-profile.JPG
-  ================================================ -->
+  <!-- ================================================ ABOUT ================================================ -->
   <section id="about">
     <div class="section-header">
       <div>
@@ -299,22 +259,12 @@
       </div>
       <div class="section-line"></div>
     </div>
-
     <div class="about-grid">
       <div class="about-text">
-        <p>
-          I'm <strong>Khadejha Omar Salim Ayyash</strong> — a graphic designer, photographer, and founder based in Amman, Jordan. My work lives at the intersection of visual identity, digital experience, and brand storytelling.
-        </p>
-        <p>
-          I graduated in Graphic Design (2026) and have spent the past 1–2 years building brands, designing websites, crafting print materials, and directing visual campaigns for clients across different industries.
-        </p>
-        <p>
-          Beyond design, I run my own marketing studio — where strategy meets aesthetics to help businesses grow and be seen.
-        </p>
-        <p class="about-quote">
-          "Design is how I translate ideas into experiences."
-        </p>
-
+        <p>I'm <strong>Khadejha Omar Salim Ayyash</strong> — a graphic designer, photographer, and founder based in Amman, Jordan. My work lives at the intersection of visual identity, digital experience, and brand storytelling.</p>
+        <p>I graduated in Graphic Design (2026) and have spent the past 1–2 years building brands, designing websites, crafting print materials, and directing visual campaigns for clients across different industries.</p>
+        <p>Beyond design, I run my own marketing studio — where strategy meets aesthetics to help businesses grow and be seen.</p>
+        <p class="about-quote">"Design is how I translate ideas into experiences."</p>
         <div class="skills-list">
           <div class="skill-item">Adobe Illustrator</div>
           <div class="skill-item">Adobe Photoshop</div>
@@ -326,15 +276,9 @@
           <div class="skill-item">Social Media Design</div>
         </div>
       </div>
-
       <div>
-        <!--
-          ╔══════════════════════════════════════════╗
-          ║  صورتك هون أيضاً: my-profile.JPG        ║
-          ╚══════════════════════════════════════════╝
-        -->
+        <!-- صورتك: my-profile.JPG -->
         <img class="about-photo" src="my-profile.JPG" alt="Khadejha Ayyash" />
-
         <div class="about-stats">
           <div class="about-stat">
             <span class="about-stat-num">2026</span>
@@ -353,9 +297,7 @@
     </div>
   </section>
 
-  <!-- ================================================
-       CONTACT
-  ================================================ -->
+  <!-- ================================================ CONTACT ================================================ -->
   <section id="contact">
     <div class="section-header">
       <div>
@@ -364,73 +306,49 @@
       </div>
       <div class="section-line"></div>
     </div>
-
     <div class="contact-inner">
       <div class="contact-copy">
         <p>Have a project in mind? Whether it's a full brand identity, a website, or a single-piece campaign — I'd love to hear what you're building.</p>
         <p>Based in Amman, Jordan · Available for remote projects worldwide.</p>
         <a class="btn-primary" href="mailto:khadejh@asonatiq.com">Send Me an Email</a>
       </div>
-
       <div class="contact-links">
-        <!--
-          ╔════════════════════════════════════════════╗
-          ║  غيّري الروابط هون:                       ║
-          ║  Instagram: https://instagram.com/khadejha ║
-          ║  Behance: رابط حسابك الصح                 ║
-          ╚════════════════════════════════════════════╝
-        -->
+        <!-- غيّري YOUR-BEHANCE-USERNAME لرابطك الصح -->
         <a class="contact-link" href="https://instagram.com/khadejha" target="_blank" rel="noopener">
-          <span class="contact-icon">◎</span>
-          <span>@khadejha — Instagram</span>
+          <span class="contact-icon">◎</span><span>@khadejha — Instagram</span>
         </a>
         <a class="contact-link" href="https://www.behance.net/YOUR-BEHANCE-USERNAME" target="_blank" rel="noopener">
-          <span class="contact-icon">◈</span>
-          <span>Behance Portfolio</span>
+          <span class="contact-icon">◈</span><span>Behance Portfolio</span>
         </a>
         <a class="contact-link" href="mailto:khadejh@asonatiq.com">
-          <span class="contact-icon">⬡</span>
-          <span>khadejh@asonatiq.com</span>
+          <span class="contact-icon">⬡</span><span>khadejh@asonatiq.com</span>
         </a>
         <a class="contact-link" href="tel:+9620788542323">
-          <span class="contact-icon">⬟</span>
-          <span>+962 0788 542 323</span>
+          <span class="contact-icon">⬟</span><span>+962 0788 542 323</span>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ================================================
-       FOOTER
-  ================================================ -->
+  <!-- ================================================ FOOTER ================================================ -->
   <footer>
     <span class="footer-text">© 2026 — All rights reserved</span>
     <span class="footer-name">Khadejha Ayyash</span>
     <span class="footer-text">Graphic Designer · Amman, Jordan</span>
   </footer>
 
-  <!-- ================================================
-       JAVASCRIPT — Filter buttons
-  ================================================ -->
   <script>
     const filterBtns = document.querySelectorAll('.filter-btn');
     const cards      = document.querySelectorAll('#worksGrid .work-card');
 
     filterBtns.forEach(btn => {
       btn.addEventListener('click', function () {
-        // Update active state
         filterBtns.forEach(b => b.classList.remove('active'));
         this.classList.add('active');
-
         const filter = this.dataset.filter;
-
         cards.forEach(card => {
           const cats = card.dataset.category || 'all';
-          if (filter === 'all' || cats.includes(filter)) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
+          card.style.display = (filter === 'all' || cats.includes(filter)) ? 'block' : 'none';
         });
       });
     });
