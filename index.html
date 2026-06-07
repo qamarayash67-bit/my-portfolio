@@ -10,19 +10,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="marketing-video.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
     <div class="container">
         <header>
-            <h1>Khadejha Ayyash</h1>
-            <p class="gold-text">Graphic Designer & Digital Marketing Specialist</p>
-            <p>Based in Amman, Jordan</p>
+            <h1 class="fade-in">Khadejha Ayyash</h1>
+            <p class="gold-text tracking-in">Graphic Designer & Digital Marketing Specialist</p>
+            <p class="location">Amman, Jordan</p>
         </header>
 
-        <section id="about">
+        <section id="about" class="section-card fade-in">
             <h2>About Me</h2>
             <div class="about-content">
-                <div>
-                    <p style="margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--text-primary);">I'm Khadejha Omar Salim Ayyash — a graphic designer, photographer, and founder based in Amman, Jordan.</p>
-                    <p>My work lives at the intersection of visual identity, digital experience, and brand storytelling. I specialize in crafting distinctive visual directions, brand strategy, content management, and capturing cinematic media that elevates businesses and helps them grow.</p>
+                <div class="about-text">
+                    <p class="lead">I'm Khadejha Omar Salim Ayyash — a professional graphic designer, photographer, and digital marketing specialist based in Amman, Jordan.</p>
+                    <p>My work lives at the intersection of visual identity, digital experience, and brand storytelling. I specialize in crafting distinctive visual directions, brand systems, and capturing cinematic media that elevates businesses and drives engagement.</p>
                 </div>
                 <div class="profile-frame">
                     <img src="my-profile.JPG" alt="Khadejha Ayyash">
@@ -31,72 +38,73 @@
         </section>
 
         <section id="work">
-            <h2>Featured Projects & Identity</h2>
+            <h2 class="fade-in">Featured Projects & Identity</h2>
             <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="juice-poster1.jpg" alt="Juice Poster Design">
-                    <h3>Juice Poster</h3>
-                    <p>Product Design, Branding & Cinematic Lighting</p>
+                <div class="portfolio-item fade-in">
+                    <div class="media-container">
+                        <img src="juice-poster1.jpg" alt="Juice Poster">
+                    </div>
+                    <h3>Juice Poster Design</h3>
+                    <p>Product Branding & Cinematic Lighting</p>
                 </div>
-                <div class="portfolio-item">
-                    <img src="car-poster.jpg" alt="Car Poster Design">
-                    <h3>Car Poster</h3>
+                <div class="portfolio-item fade-in">
+                    <div class="media-container">
+                        <img src="car-poster.jpg" alt="Car Poster">
+                    </div>
+                    <h3>Car Poster Design</h3>
                     <p>Automotive Advertising & Visual Direction</p>
                 </div>
-                <div class="portfolio-item">
-                    <img src="airline-poster.jpg" alt="Airline Poster Design">
-                    <h3>Airline Poster</h3>
-                    <p>Marketing, Editorial Layout & Visual Campaign</p>
+                <div class="portfolio-item fade-in">
+                    <div class="media-container">
+                        <img src="airline-poster.jpg" alt="Airline Poster">
+                    </div>
+                    <h3>Airline Poster Campaign</h3>
+                    <p>Marketing, Editorial Layout & Visual Strategy</p>
                 </div>
-                <div class="portfolio-item">
-                    <img src="sketches-gallery.jpg" alt="Sketches and Drawing Gallery">
+                <div class="portfolio-item fade-in">
+                    <div class="media-container">
+                        <img src="sketches-gallery.jpg" alt="Sketches Gallery">
+                    </div>
                     <h3>Creative Sketches</h3>
                     <p>Concept Art & Digital Illustration Gallery</p>
                 </div>
-                <div class="portfolio-item">
-                    <img src="portrait-session.jpg" alt="Photography Portrait Session">
+                <div class="portfolio-item fade-in">
+                    <div class="media-container">
+                        <img src="portrait-session.jpg" alt="Portrait Photography">
+                    </div>
                     <h3>Portrait & Product Photography</h3>
-                    <p>Professional Visual Storytelling & Lighting</p>
+                    <p>Professional Visual Storytelling & Studio Lighting</p>
                 </div>
-                <div class="portfolio-item">
-                    <img src="eyewear-main.jpg" alt="Eyewear Visual Identity">
+                <div class="portfolio-item fade-in">
+                    <div class="media-container">
+                        <img src="eyewear-main.jpg" alt="Visual Identity">
+                    </div>
                     <h3>Visual Identity Showcase</h3>
                     <p>Brand Identity Guidelines & Typography Systems</p>
                 </div>
             </div>
         </section>
 
-        <section id="video">
-            <h2>Video Production & Motion Graphics</h2>
-            <div class="portfolio-item" style="max-width: 800px; margin: 0 auto; padding: 1.5rem;">
-                <video controls style="width: 100%; height: auto; border-radius: 8px;">
-                    <source src="marketing-video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <h3 style="margin-top: 1.2rem;">Cinematic Showreel & Visual Campaigns</h3>
-            </div>
-        </section>
-
-        <section id="documents">
-            <h2>Project Cases & Studies (PDF)</h2>
+        <section id="documents" class="section-card fade-in">
+            <h2>Project Case Studies (PDF)</h2>
             <div class="pdf-box">
-                <p>Click on any project below to view the full presentation details directly.</p>
+                <p>Select a project case below to view full identity guidelines and presentation sheets.</p>
                 <div class="pdf-grid">
-                    <a href="eyewear-project.pdf" target="_blank" class="btn">👁️ Eyewear Project Case</a>
-                    <a href="magazine-project.pdf" target="_blank" class="btn">📖 Magazine Presentation</a>
-                    <a href="web-design-project.pdf" target="_blank" class="btn">🌐 Web Design System</a>
+                    <a href="eyewear-project.pdf" target="_blank" class="btn-gold">👁️ Eyewear Case Study</a>
+                    <a href="magazine-project.pdf" target="_blank" class="btn-gold">📖 Magazine Presentation</a>
+                    <a href="web-design-project.pdf" target="_blank" class="btn-gold">🌐 Web Design System</a>
                 </div>
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="fade-in">
             <div class="contact-card">
-                <h2>Let's Work Together</h2>
-                <p>Have a project or digital campaign in mind? Whether it's a full brand identity, digital asset design, or social media strategy — I'd love to hear what you're building.</p>
+                <h2>Let's Build Something Exceptional</h2>
+                <p>Have a project or digital campaign in mind? Let's collaborate to bring your brand's vision to life with professional assets and marketing strategy.</p>
                 <div class="contact-grid">
-                    <a href="https://instagram.com/kh_.omar" target="_blank" class="contact-btn" style="color: var(--accent-gold); border-color: var(--accent-gold);">📸 Instagram: @kh_.omar</a>
-                    <a href="https://wa.me/962788542323" target="_blank" class="contact-btn">💬 Chat on WhatsApp</a>
-                    <a href="tel:+962788542323" class="contact-btn">📞 Call: +962 78 854 2323</a>
+                    <a href="https://instagram.com/kh_.omar" target="_blank" class="contact-link insta-btn">📸 Instagram: @kh_.omar</a>
+                    <a href="https://wa.me/962788542323" target="_blank" class="contact-link whatsapp-btn">💬 Chat on WhatsApp</a>
+                    <a href="tel:+962788542323" class="contact-link call-btn">📞 Call: +962 78 854 2323</a>
                 </div>
             </div>
         </section>
