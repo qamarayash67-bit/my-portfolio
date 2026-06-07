@@ -1,345 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Khadejha Ayyash — Graphic Designer</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#0e0e11;
-  --surface:#161619;
-  --surface2:#1e1e23;
-  --accent:#c9a96e;
-  --accent2:#e8c98a;
-  --text:#f0ece4;
-  --muted:#888;
-  --border:rgba(201,169,110,0.15);
-}
-body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khadijeh Ayash | Portfolio</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: #111; color: #fff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 40px 20px; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    
+    /* Header Styling */
+    header { text-align: center; margin-bottom: 60px; }
+    .profile-img { width: 130px; height: 130px; border-radius: 50%; border: 3px solid #cca43b; object-fit: cover; margin-bottom: 20px; }
+    header h1 { font-size: 2.5rem; color: #cca43b; font-weight: 700; letter-spacing: 1px; margin-bottom: 10px; }
+    header p { color: #999; font-size: 1.1rem; }
 
-nav{display:flex;justify-content:space-between;align-items:center;padding:2rem 4rem;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(14,14,17,0.92);backdrop-filter:blur(12px);z-index:100}
-.nav-name{font-family:'Playfair Display',serif;font-size:1.2rem;letter-spacing:0.05em;color:var(--accent)}
-.nav-links{display:flex;gap:2.5rem}
-.nav-links a{text-decoration:none;color:var(--muted);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;transition:.2s}
-.nav-links a:hover{color:var(--accent)}
+    /* Grid Styling */
+    .works-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; margin-bottom: 60px; }
+    .work-card { background: #1a1a1a; border: 1px solid #222; border-radius: 8px; overflow: hidden; transition: transform 0.3s, border-color 0.3s; }
+    .work-card:hover { transform: translateY(-5px); border-color: #cca43b; }
+    
+    .work-thumb { width: 100%; height: 240px; background: #222; overflow: hidden; position: relative; }
+    .work-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    
+    .work-info { padding: 20px; }
+    .work-category { font-size: 0.8rem; text-transform: uppercase; color: #cca43b; letter-spacing: 1px; margin-bottom: 5px; font-weight: 600; }
+    .work-title { font-size: 1.3rem; font-weight: 600; margin-bottom: 8px; color: #fff; }
+    .work-sub { font-size: 0.9rem; color: #aaa; line-height: 1.5; }
+    
+    .pdf-btn { display: inline-block; margin-top: 15px; padding: 8px 16px; background: #cca43b; color: #111; text-decoration: none; border-radius: 4px; font-size: 0.85rem; font-weight: bold; transition: background 0.3s; }
+    .pdf-btn:hover { background: #e5b945; }
 
-.hero{padding:8rem 4rem 6rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;max-width:1200px;margin:0 auto}
-.hero-label{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem}
-.hero-label::before{content:'';display:inline-block;width:2rem;height:1px;background:var(--accent)}
-h1{font-family:'Playfair Display',serif;font-size:4rem;line-height:1.1;font-weight:700;margin-bottom:1.5rem}
-h1 span{color:var(--accent)}
-.hero-bio{font-size:1rem;line-height:1.8;color:#aaa;max-width:480px;margin-bottom:2.5rem}
-.hero-tags{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2.5rem}
-.tag{padding:.35rem .9rem;border:1px solid var(--border);border-radius:100px;font-size:.75rem;color:var(--accent2);letter-spacing:.05em}
-.hero-cta{display:flex;gap:1rem}
-.btn-primary{padding:.75rem 2rem;background:var(--accent);color:#0e0e11;border:none;border-radius:4px;font-family:'DM Sans';font-size:.85rem;font-weight:500;cursor:pointer;letter-spacing:.05em;text-transform:uppercase;transition:.2s}
-.btn-primary:hover{background:var(--accent2)}
-.btn-ghost{padding:.75rem 2rem;background:transparent;color:var(--accent);border:1px solid var(--border);border-radius:4px;font-family:'DM Sans';font-size:.85rem;cursor:pointer;letter-spacing:.05em;text-transform:uppercase;transition:.2s}
-.btn-ghost:hover{border-color:var(--accent);background:rgba(201,169,110,0.05)}
-
-.hero-photo{position:relative}
-.photo-frame{width:100%;aspect-ratio:3/4;background:var(--surface2);border-radius:2px;overflow:hidden;border:1px solid var(--border)}
-.photo-frame img{width:100%;height:100%;object-fit:cover;filter:grayscale(20%) contrast(1.05)}
-.photo-accent{position:absolute;bottom:-1.5rem;right:-1.5rem;width:60%;aspect-ratio:1;border:1px solid var(--border);border-radius:2px;z-index:-1}
-.hero-stats{position:absolute;bottom:2rem;left:-2rem;background:var(--surface2);border:1px solid var(--border);padding:1.25rem 1.5rem;border-radius:4px;backdrop-filter:blur(8px)}
-.stat{text-align:center}
-.stat-num{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--accent);display:block}
-.stat-label{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
-
-section{max-width:1200px;margin:0 auto;padding:5rem 4rem}
-.section-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:3rem}
-.section-label{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem}
-.section-title{font-family:'Playfair Display',serif;font-size:2.5rem}
-.section-line{flex:1;height:1px;background:var(--border);margin-left:2rem}
-
-.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-.service-card{background:var(--surface);border:1px solid var(--border);padding:2rem 1.5rem;border-radius:2px;transition:.3s;cursor:pointer}
-.service-card:hover{border-color:var(--accent);background:var(--surface2);transform:translateY(-4px)}
-.service-icon{font-size:1.5rem;margin-bottom:1.25rem;display:block}
-.service-name{font-size:.95rem;font-weight:500;margin-bottom:.5rem;color:var(--text)}
-.service-desc{font-size:.8rem;color:var(--muted);line-height:1.6}
-
-.works-filter{display:flex;gap:.75rem;margin-bottom:2.5rem;flex-wrap:wrap}
-.filter-btn{padding:.4rem 1rem;border:1px solid var(--border);background:transparent;color:var(--muted);border-radius:100px;font-size:.78rem;cursor:pointer;letter-spacing:.05em;transition:.2s;font-family:'DM Sans'}
-.filter-btn.active,.filter-btn:hover{border-color:var(--accent);color:var(--accent);background:rgba(201,169,110,0.07)}
-
-.works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.work-card{background:var(--surface);border:1px solid var(--border);border-radius:2px;overflow:hidden;transition:.3s;cursor:pointer}
-.work-card:hover{border-color:var(--accent);transform:translateY(-4px)}
-.work-thumb{aspect-ratio:4/3;overflow:hidden;background:var(--surface2)}
-.work-thumb img{width:100%;height:100%;object-fit:cover;transition:.4s}
-.work-card:hover .work-thumb img{transform:scale(1.06)}
-.work-info{padding:1.25rem}
-.work-category{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem}
-.work-title{font-size:.95rem;font-weight:500;margin-bottom:.35rem}
-.work-sub{font-size:.78rem;color:var(--muted)}
-
-.about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start}
-.about-text p{font-size:1rem;line-height:1.9;color:#aaa;margin-bottom:1.2rem}
-.skills-list{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-top:2rem}
-.skill-item{display:flex;align-items:center;gap:.6rem;font-size:.85rem;color:var(--muted);padding:.5rem 0;border-bottom:1px solid var(--border)}
-.skill-item::before{content:'→';color:var(--accent);font-size:.8rem}
-
-.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
-.contact-copy p{font-size:1rem;color:#aaa;line-height:1.8;margin-bottom:1.5rem}
-.contact-links{display:flex;flex-direction:column;gap:.75rem}
-.contact-link{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--muted);font-size:.9rem;padding:.75rem 1rem;border:1px solid var(--border);border-radius:2px;transition:.2s}
-.contact-link:hover{border-color:var(--accent);color:var(--accent);background:rgba(201,169,110,0.04)}
-.contact-link span:first-child{color:var(--accent);font-size:1rem}
-
-footer{border-top:1px solid var(--border);padding:2rem 4rem;display:flex;justify-content:space-between;align-items:center}
-.footer-text{font-size:.8rem;color:var(--muted)}
-.footer-name{font-family:'Playfair Display',serif;font-size:.95rem;color:var(--accent)}
-</style>
+    /* Contact Section Styling */
+    .contact-section { text-align: center; padding: 40px 20px; background: #1a1a1a; border: 1px solid #222; border-radius: 8px; margin-top: 40px; }
+    .contact-section h2 { color: #cca43b; margin-bottom: 15px; font-size: 1.8rem; }
+    .contact-section p { color: #aaa; margin-bottom: 25px; font-size: 1rem; }
+    .contact-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .contact-links a { color: #fff; text-decoration: none; font-weight: 600; font-size: 0.95rem; padding: 10px 20px; border: 1px solid #cca43b; border-radius: 4px; transition: all 0.3s; }
+    .contact-links a:hover { background: #cca43b; color: #111; }
+    .contact-links a.phone-link { border-color: #25D366; }
+    .contact-links a.phone-link:hover { background: #25D366; color: #111; }
+  </style>
 </head>
 <body>
 
-<nav>
-  <div class="nav-name">Khadejha Ayyash</div>
-  <div class="nav-links">
-    <a href="#works">Work</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+  <div class="container">
+    
+    <header>
+      <img src="my-profile.jpg" alt="Khadijeh Ayash" class="profile-img">
+      <h1>KHADIJEH AYASH</h1>
+      <p>Graphic Designer & Digital Marketing Specialist</p>
+    </header>
 
-<div class="hero">
-  <div class="hero-text">
-    <div class="hero-label">Graphic Designer · Jordan</div>
-    <h1>Where ideas <span>become</span> visual identity.</h1>
-    <p class="hero-bio">I'm Khadejha Ayyash — a multidisciplinary graphic designer with a passion for brand storytelling, UI/UX design, and visual direction. I build brands that people feel before they read.</p>
-    <div class="hero-tags">
-      <span class="tag">Brand Identity</span>
-      <span class="tag">UI/UX Design</span>
-      <span class="tag">Photography</span>
-      <span class="tag">Social Media</span>
-      <span class="tag">Print Design</span>
-    </div>
-    <div class="hero-cta">
-      <button class="btn-primary" onclick="document.getElementById('works').scrollIntoView({behavior:'smooth'})">View My Work</button>
-      <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Let's Talk</button>
-    </div>
-  </div>
-  <div class="hero-photo">
-    <!-- ====================================================
-         صورتك: غيّري "_O0A5074.JPG" لمسار الصورة عندك
-         مثال: src="images/my-photo.jpg"
-    ===================================================== -->
-    <div class="photo-frame">
-      <img src="_O0A5074.JPG" alt="Khadejha Ayyash">
-    </div>
-    <div class="photo-accent"></div>
-    <div class="hero-stats">
-      <div class="stat">
-        <!-- غيّري الرقم هون -->
-        <span class="stat-num">4+</span>
-        <span class="stat-label">Projects Delivered</span>
-      </div>
-    </div>
-  </div>
-</div>
+    <!-- PROJECTS GRID -->
+    <div class="works-grid">
 
-<!-- ============ SERVICES ============ -->
-<section id="services">
-  <div class="section-header">
-    <div>
-      <div class="section-label">What I Do</div>
-      <div class="section-title">Services</div>
-    </div>
-    <div class="section-line"></div>
-  </div>
-  <div class="services-grid">
-    <div class="service-card">
-      <span class="service-icon">◈</span>
-      <div class="service-name">Brand Identity</div>
-      <div class="service-desc">Logo design, visual systems, and brand guidelines that create lasting impressions.</div>
-    </div>
-    <div class="service-card">
-      <span class="service-icon">⬡</span>
-      <div class="service-name">UI/UX Design</div>
-      <div class="service-desc">Web and app interfaces with clean layouts, intuitive flows, and polished visuals.</div>
-    </div>
-    <div class="service-card">
-      <span class="service-icon">◎</span>
-      <div class="service-name">Marketing Design</div>
-      <div class="service-desc">Social media content, print ads, and campaign visuals that convert attention.</div>
-    </div>
-    <div class="service-card">
-      <span class="service-icon">⬟</span>
-      <div class="service-name">Photography</div>
-      <div class="service-desc">Visual direction and photography to elevate products and brand storytelling.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ WORKS ============ -->
-<section id="works">
-  <div class="section-header">
-    <div>
-      <div class="section-label">Selected Projects</div>
-      <div class="section-title">My Work</div>
-    </div>
-    <div class="section-line"></div>
-  </div>
-  <div class="works-filter">
-    <button class="filter-btn active">All</button>
-    <button class="filter-btn">Brand Identity</button>
-    <button class="filter-btn">UI/UX</button>
-    <button class="filter-btn">Print</button>
-    <button class="filter-btn">Product</button>
-  </div>
-  <div class="works-grid">
-
-    <!-- PROJECT 1 — غيّري src للصورة الصح عندك -->
-    <div class="work-card">
-      <div class="work-thumb"><img src="Web_1920___1.jpg" alt="Sonatiq Website"></div>
-      <div class="work-info">
-        <div class="work-category">UI/UX Design</div>
-        <div class="work-title">SONATIQ — Sound Design Studio</div>
-        <div class="work-sub">Full website design · Multi-page UI system</div>
-      </div>
-    </div>
-
-    <!-- PROJECT 2 -->
-    <div class="work-card">
-      <div class="work-thumb"><img src="Artboard___2.jpg" alt="Sonatiq App Screen"></div>
-      <div class="work-info">
-        <div class="work-category">UI/UX Design</div>
-        <div class="work-title">SONATIQ — Service Pages</div>
-        <div class="work-sub">Film Scoring · Recording · Sonic Branding · Game Audio</div>
-      </div>
-    </div>
-
-    <!-- PROJECT 3 -->
-    <div class="work-card">
-      <div class="work-thumb"><img src="موكب_بزنس_كارد_copy.jpg" alt="Moukkab Business Card"></div>
-      <div class="work-info">
-        <div class="work-category">Brand Identity · Print</div>
-        <div class="work-title">Moukkab Beauty — Business Card</div>
-        <div class="work-sub">Brand stationery · Double-sided print design</div>
-      </div>
-    </div>
-
-    <!-- PROJECT 4 -->
-    <div class="work-card">
-      <div class="work-thumb"><img src="موكب_كيس_هداية_copy.jpg" alt="Moukkab Gift Bag"></div>
-      <div class="work-info">
-        <div class="work-category">Brand Identity · Packaging</div>
-        <div class="work-title">Moukkab Beauty — Gift Bag</div>
-        <div class="work-sub">Brand packaging · 3D mockup presentation</div>
-      </div>
-    </div>
-
-    <!-- PROJECT 5 -->
-    <div class="work-card">
-      <div class="work-thumb"><img src="COCONUT_OIL_واجب.jpg" alt="Coconut Oil Campaign"></div>
-      <div class="work-info">
-        <div class="work-category">Product Design · Campaign</div>
-        <div class="work-title">Parachute Coconut Oil</div>
-        <div class="work-sub">Product advertisement · Visual direction</div>
-      </div>
-    </div>
-
-    <!-- PROJECT 6 — Coming Soon / حطي صورة هوية النظارات هون -->
-    <div class="work-card" style="background:var(--surface2);border-style:dashed;display:flex;align-items:center;justify-content:center;min-height:280px;cursor:default">
-      <div style="text-align:center;padding:2rem">
-        <div style="font-size:2rem;margin-bottom:1rem;color:var(--border)">+</div>
-        <div style="font-size:.85rem;color:var(--muted)">Eyewear Brand Identity</div>
-        <div style="font-size:.75rem;color:var(--border);margin-top:.3rem">Coming soon</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ============ ABOUT ============ -->
-<section id="about">
-  <div class="section-header">
-    <div>
-      <div class="section-label">Who I Am</div>
-      <div class="section-title">About Me</div>
-    </div>
-    <div class="section-line"></div>
-  </div>
-  <div class="about-grid">
-    <div class="about-text">
-      <!-- غيّري النص هون حسب ما بدك -->
-      <p>I'm Khadejha Omar Salim Ayyash — a graphic designer, photographer, and founder based in Amman, Jordan. My work lives at the intersection of visual identity, digital experience, and brand storytelling.</p>
-      <p>I graduated in Graphic Design (2026) and have spent the past 1–2 years building brands, designing websites, crafting print materials, and directing visual campaigns for clients across different industries.</p>
-      <p>I believe great design isn't just beautiful — it speaks, connects, and leaves a mark. Whether it's a logo, a website, or a product shot, I approach every project with intention and craft.</p>
-      <p style="color:var(--accent);font-style:italic;font-family:'Playfair Display',serif;font-size:1.05rem">"Design is how I translate ideas into experiences."</p>
-      <div class="skills-list">
-        <!-- أضيفي أو احذفي skills حسب ما بدك -->
-        <div class="skill-item">Adobe Illustrator</div>
-        <div class="skill-item">Adobe Photoshop</div>
-        <div class="skill-item">Adobe InDesign</div>
-        <div class="skill-item">Figma / UI Design</div>
-        <div class="skill-item">Brand Strategy</div>
-        <div class="skill-item">Photography</div>
-        <div class="skill-item">Print Design</div>
-        <div class="skill-item">Social Media Design</div>
-      </div>
-    </div>
-    <div>
-      <img src="_O0A5074.JPG" alt="Khadejha" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:2px;border:1px solid var(--border);filter:sepia(10%) contrast(1.05)">
-      <div style="display:flex;gap:1rem;margin-top:1rem">
-        <div style="flex:1;background:var(--surface);border:1px solid var(--border);padding:1rem;border-radius:2px;text-align:center">
-          <span style="font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--accent);display:block">2026</span>
-          <span style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em">Graduate</span>
+      <!-- PROJECT 1: Marketing Agency Showcase (فيديو متحرك) -->
+      <div class="work-card">
+        <div class="work-thumb">
+          <video src="marketing-video.mp4" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover; display:block;"></video>
         </div>
-        <div style="flex:1;background:var(--surface);border:1px solid var(--border);padding:1rem;border-radius:2px;text-align:center">
-          <span style="font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--accent);display:block">4+</span>
-          <span style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em">Disciplines</span>
-        </div>
-        <div style="flex:1;background:var(--surface);border:1px solid var(--border);padding:1rem;border-radius:2px;text-align:center">
-          <span style="font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--accent);display:block">JO</span>
-          <span style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em">Amman</span>
+        <div class="work-info">
+          <div class="work-category">Corporate Branding & Motion</div>
+          <div class="work-title">Marketing Company Identity</div>
+          <div class="work-sub">Full branding concept video showcase, official stationery, and animated assets.</div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- ============ CONTACT ============ -->
-<section id="contact">
-  <div class="section-header">
-    <div>
-      <div class="section-label">Get In Touch</div>
-      <div class="section-title">Let's Work Together</div>
-    </div>
-    <div class="section-line"></div>
-  </div>
-  <div class="contact-inner">
-    <div class="contact-copy">
-      <p>Have a project in mind? Whether it's a full brand identity, a website, or a single-piece campaign — I'd love to hear what you're building.</p>
-      <p>Based in Amman, Jordan · Available for remote projects worldwide.</p>
-    </div>
-    <div class="contact-links">
-      <!-- غيّري الروابط هون -->
-      <a class="contact-link" href="https://instagram.com/khadejha" target="_blank"><span>◎</span><span>@khadejha — Instagram</span></a>
-      <a class="contact-link" href="https://www.behance.net/YOUR-USERNAME" target="_blank"><span>◈</span><span>Behance Portfolio</span></a>
-      <a class="contact-link" href="mailto:khadejh@asonatiq.com"><span>⬡</span><span>khadejh@asonatiq.com</span></a>
-      <a class="contact-link" href="tel:+9620788542323"><span>⬟</span><span>+962 0788 542 323</span></a>
-    </div>
-  </div>
-</section>
+      <!-- PROJECT 2: Eyewear Brand Identity (هوية النظارات مع زر PDF) -->
+      <div class="work-card">
+        <div class="work-thumb"><img src="eyewear-main.jpg" alt="Eyewear Brand Identity"></div>
+        <div class="work-info">
+          <div class="work-category">Brand Identity</div>
+          <div class="work-title">Eyewear Brand Project</div>
+          <div class="work-sub">Complete visual system including logo, stationery, and business cards.</div>
+          <a href="eyewear-project.pdf" target="_blank" class="pdf-btn">View Full PDF 📄</a>
+        </div>
+      </div>
 
-<footer>
-  <span class="footer-text">© 2026 — All rights reserved</span>
-  <span class="footer-name">Khadejha Ayyash</span>
-  <span class="footer-text">Graphic Designer · Amman, Jordan</span>
-</footer>
+      <!-- PROJECT 3: Cake Magazine Layout (المجلة مع زر PDF) -->
+      <div class="work-card">
+        <div class="work-thumb"><img src="magazine-spread.jpg" alt="10-Page Magazine Layout"></div>
+        <div class="work-info">
+          <div class="work-category">Print & Editorial Design</div>
+          <div class="work-title">10-Page Cake Magazine</div>
+          <div class="work-sub">Professional multi-page layout design and typography structuring.</div>
+          <a href="magazine-project.pdf" target="_blank" class="pdf-btn">Read Full Magazine 📖</a>
+        </div>
+      </div>
 
-<script>
-document.querySelectorAll('.filter-btn').forEach(btn=>{
-  btn.addEventListener('click',function(){
-    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
-    this.classList.add('active');
-  });
-});
-</script>
+      <!-- PROJECT 4: Portrait Photography (تصوير الأشخاص) -->
+      <div class="work-card">
+        <div class="work-thumb"><img src="portrait-session.jpg" alt="Portrait Photography Session"></div>
+        <div class="work-info">
+          <div class="work-category">Photography</div>
+          <div class="work-title">Portrait Photoshoot Session</div>
+          <div class="work-sub">Professional portrait captures featuring creative lighting and retouching.</div>
+        </div>
+      </div>
+
+      <!-- PROJECT 5: Fine Art Gallery (معرض الرسم) -->
+      <div class="work-card">
+        <div class="work-thumb"><img src="sketches-gallery.jpg" alt="Fine Art Gallery"></div>
+        <div class="work-info">
+          <div class="work-category">Fine Art</div>
+          <div class="work-title">Traditional Sketches Collection</div>
+          <div class="work-sub">A curated collection of hand-drawn conceptual charcoal and graphite artworks.</div>
+        </div>
+      </div>
+
+      <!-- PROJECT 6: Porsche Car Poster (بوستر بورش) -->
+      <div class="work-card">
+        <div class="work-thumb"><img src="porsche-poster.jpg" alt="Porsche Commercial Poster"></div>
+        <div class="work-info">
+          <div class="work-category">Creative Advertising</div>
+          <div class="work-title">Porsche Celebration Poster</div>
+          <div class="work-sub">Luxury automotive advertising design and professional layout manipulation.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <div class="contact-section">
+      <h2>Let's Connect</h2>
+      <p>Interested in working together? Feel free to reach out through any of the platforms below!</p>
+      <div class="contact-links">
+        <a href="tel:+962788542323" class="phone-link">📞 0788542323</a>
+        <a href="https://www.behance.net" target="_blank">Behance</a>
+        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+        <a href="mailto:your-email@example.com">Email Me</a>
+      </div>
+    </div>
+
+  </div>
+
 </body>
 </html>
